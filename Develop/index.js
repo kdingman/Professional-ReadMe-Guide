@@ -86,34 +86,34 @@ const questions = [
     {
         type: 'input',
         name: 'testing',
-        message: 'What command should be run for testing? (Required)',
+        message: 'Please provide any tests written for your application and give examples on how to run them.',
         validate: testingInput => {
             if(testingInput) {
                 return true;
             }
             else {
-                console.log('Please enter which command is run for testing.');
+                console.log('Please provide any information testing the application.');
             }
         }
     },
     {
         type: 'input',
         name: 'contributions',
-        message: 'What does the user need to know about making contributions to your repo?',
+        message: 'Please provide instructions on how other developers can contribute to your application.',
         validate: contributionsInput => {
             if(contributionsInput) {
                 return true;
             }
             else {
-                console.log('Please enter contribution information');
+                console.log('Please enter contribution guidelines.');
             }
         }
     },
     {
         type: 'list',
         name: 'license',
-        message: 'What type of license does your project have? (Required)',
-        choices: ['Apache', 'BSD', 'GPL', 'MIT', 'None']
+        message: 'What type of license does your project have?',
+        choices: ['AGPLv3', 'Apache 2.0', 'BSD', 'GPLv2', 'GLPv3', 'ISC', 'MIT', 'None']
     },
 ];
 

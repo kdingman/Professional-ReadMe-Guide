@@ -1,36 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Questions to generate ReadMe File
 const questions = [
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your GitHub username? (Required)',
-        validate: githubInput => {
-            if (githubInput) {
-                return true;
-            }
-            else {
-                console.log('Please enter your GitHub username.');
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Please enter a valid email address. (Required)',
-        validate: emailInput => {
-            if (emailInput) {
-                return true;
-            }
-            else {
-                console.log('Please enter a valid email address.');
-            }
-        }
-
-    },
     {
         type: 'input',
         name: 'title',
@@ -113,8 +86,47 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What type of license does your project have?',
-        choices: ['AGPLv3', 'Apache 2.0', 'BSD', 'GPLv2', 'GLPv3', 'ISC', 'MIT', 'None']
+        choices: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None']
     },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your GitHub username? (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            }
+            else {
+                console.log('Please enter your GitHub username.');
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter a valid email address. (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            }
+            else {
+                console.log('Please enter a valid email address.');
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Please give instructions on how to contact you.',
+        validate: questionsInput => {
+            if(questionsInput) {
+                return true;
+            }
+            else {
+                console.log('Please include instructions on how to contact you.');
+            }
+        }
+    }
 ];
 
 // TODO: Create a function to write README file

@@ -5,9 +5,9 @@
   README Generator
 
   
-    ![badge](https://img.shields.io/badge/license-BSD3-ff69b4)
+    ![APACHE 2.0](https://img.shields.io/badge/license-APACHE2.0-&?label=healthinesses-ff69b4)
 
-  ## **Table-of-Contents**  
+  ## Table-of-Contents  
   
   - [**Installation**](#installation)  
   - [**Usage**](#usage)  
@@ -16,28 +16,28 @@
   - [**License**](#license)  
   - [**Contact Me**](#contact-me)  
 
-  ## [**Installation**](#table-of-contents)
+  ### [**Installation**](#table-of-contents)
   To install the necessary products, run the following:  
-  lkadjfkladfj
+  alkdjlkfj
 
-  ## [**Usage**](#table-of-contents)
-  laksdjflksdjf
+  ### [**Usage**](#table-of-contents)
+  alsdkfjlasdfj
 
-  ## [**Testing**](#table-of-contents)
-  laksdjflksfjd
+  ### [**Testing**](#table-of-contents)
+  lsdkfjlasdfj
 
-  ## [**Contributions**](#table-of-contents)
-  lsjdflksdfj
+  ### [**Contributions**](#table-of-contents)
+  lasdjfldfj
 
-  ## [**License**](#table-of-contents)
-  This project is licensed under the 
-    BSD 3 license.
-
-  For more information on the license of this application:
+  ### [**License**](#table-of-contents)
   
-    BSD 3(https://opensource.org/licenses/BSD-3-Clause)  
+    APACHE 2.0
+    For more information on the license of this application:
+    
+    APACHE 2.0(https://opensource.org/licenses/Apache-2.0)
+    
 
-  ## [**Contact Me**](#table-of-contents)
+  ### [**Contact Me**](#table-of-contents)
   If you have any questions regarding this repo you can:  
     Email me directly at kcdonlan@yahoo.com  
     Or checkout my work at GitHub: kdingman, (https://github.com/kdingman)

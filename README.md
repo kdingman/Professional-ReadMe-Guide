@@ -45,3 +45,11 @@ By using this generator, the user will be able to answer common questions and pu
 
 ### **Instructional Video**
 https://watch.screencastify.com/v/IcLWfQY8C9q16DeCHMrN
+
+### **Technology Used**
+  - JavaScript
+  - Nodejs
+  - NPM Inquirer
+  - Screencastify
+  - Shield IO for Badges (https://shields.io/category/license)
+  - OpenSource for License information (https://opensource.org/licenses)

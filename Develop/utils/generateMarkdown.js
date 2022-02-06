@@ -3,19 +3,19 @@ function renderLicenseBadge(license) {
 
   if(license === 'APACHE 2.0') {
     return `
-    ![${license}](https://img.shields.io/badge/license-APACHE2.0-ff69b4)`;
+    ![badge](https://img.shields.io/badge/license-APACHE2.0-ff69b4.svg)`;
   }
   else if(license === 'BSD 3') {
     return `
-    ![${license}](https://img.shields.io/badge/license-BSD3-ff69b4)`;
+    ![${license}](https://img.shields.io/badge/license-BSD3-ff69b4.svg)`;
   }
   else if(license === 'GPL 3.0') {
     return `
-    ![${license}](https://img.shields.io/badge/license-GPL3.0-ff69b4)`;
+    ![${license}](https://img.shields.io/badge/license-GPL3.0-ff69b4.svg)`;
   }
   else if(license === 'MIT') {
     return `
-    ![${license}](https://img.shields.io/badge/license-MIT-ff69b4)`;
+    ![${license}](https://img.shields.io/badge/license-MIT-ff69b4.svg)`;
   }
   else {
     return '';

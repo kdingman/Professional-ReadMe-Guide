@@ -1,9 +1,11 @@
 // Packages needed for application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Questions to generate ReadMe File
 const questions = [
+    // Title of Project
     {
         type: 'input',
         name: 'title',
@@ -17,12 +19,13 @@ const questions = [
             }
         }
     },
+    // Description of Project
     {
         type: 'input',
         name: 'description',
         message: 'Please provide a description of your project. (Required)',
-        validate: descpitionInput => {
-            if(descpitionInput) {
+        validate: descriptionInput => {
+            if(descriptionInput) {
                 return true;
             }
             else {
@@ -30,12 +33,13 @@ const questions = [
             }
         }
     },
+    // Installtion instructions needed for project
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide installation instructions. (Required)',
-        validate: instllationInput => {
-            if(instllationInput) {
+        message: 'Please provide installation instructions.',
+        validate: installationInput => {
+            if(installationInput) {
                 return true;
             }
             else {
@@ -43,6 +47,7 @@ const questions = [
             }
         }
     },
+    // Information needed to use repo
     {
         type: 'input',
         name: 'usage',
@@ -56,6 +61,7 @@ const questions = [
             }
         }
     },
+    // Provide testing that was written or provide examples
     {
         type: 'input',
         name: 'testing',
@@ -69,6 +75,7 @@ const questions = [
             }
         }
     },
+    // Instructions on how a developer can contribute to your repo
     {
         type: 'input',
         name: 'contributions',
@@ -82,12 +89,14 @@ const questions = [
             }
         }
     },
+    // The type of license used for this application
     {
         type: 'list',
         name: 'license',
         message: 'What type of license does your project have?',
         choices: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None']
     },
+    // GitHub username provided for developer contact
     {
         type: 'input',
         name: 'github',
@@ -101,6 +110,7 @@ const questions = [
             }
         }
     },
+    // Email provided for developer contact
     {
         type: 'input',
         name: 'email',
@@ -114,26 +124,24 @@ const questions = [
             }
         }
     },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'Please give instructions on how to contact you.',
-        validate: questionsInput => {
-            if(questionsInput) {
-                return true;
-            }
-            else {
-                console.log('Please include instructions on how to contact you.');
-            }
-        }
-    }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if(err)
+            throw err;
+            console.log('YEAH! Information was transferred successfully to the README!')
+    });
+};
 
-// TODO: Create a function to initialize app
-function init() {}
+// Initialize app
+function init() {
+    inquirer.prompt(questions).then(function(userInput) {
+        console.log(userInput)
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
+};
 
-// Function call to initialize app
+// Call initialize app
 init();
